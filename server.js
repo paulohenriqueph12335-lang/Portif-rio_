@@ -1,28 +1,54 @@
 const { createServer } = require('node:http');
 const { readFile } = require('node:fs/promises');
-const { extname, join, normalize } = require('node:path');
+const { extname, join, normalize, relative } = require('node:path');
 
 const publicDir = __dirname;
 const port = process.env.PORT || 3000;
-const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml; charset=utf-8', '.json': 'application/json; charset=utf-8' };
+const publicFiles = new Set(['/index.html', '/styles.css', '/assets/portfolio-preview.svg', '/assets/portfolio-preview.generated.svg']);
+const types = {
+  '.html': 'text/html; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.svg': 'image/svg+xml; charset=utf-8',
+};
 
-function safePath(url) {
+function resolvePublicPath(url) {
   const pathname = decodeURIComponent(new URL(url, `http://localhost:${port}`).pathname);
   const requested = pathname === '/' ? '/index.html' : pathname;
+
+  if (!publicFiles.has(requested)) {
+    return requested.includes('.') ? null : join(publicDir, 'index.html');
+  }
+
   const filePath = normalize(join(publicDir, requested));
-  return filePath.startsWith(publicDir) ? filePath : join(publicDir, 'index.html');
+  const relativePath = relative(publicDir, filePath);
+  return relativePath.startsWith('..') || relativePath.startsWith('/') ? null : filePath;
 }
 
 createServer(async (req, res) => {
+  if (req.url === '/health') {
+    res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
+    res.end(JSON.stringify({ status: 'ok', service: 'portfolio-black-dark' }));
+    return;
+  }
+
+  const filePath = resolvePublicPath(req.url || '/');
+
+  if (!filePath) {
+    res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('Not found');
+    return;
+  }
+
   try {
-    const filePath = safePath(req.url || '/');
     const body = await readFile(filePath);
-    res.writeHead(200, { 'Content-Type': types[extname(filePath)] || 'application/octet-stream' });
+    res.writeHead(200, {
+      'Content-Type': types[extname(filePath)] || 'application/octet-stream',
+      'Cache-Control': filePath.endsWith('index.html') ? 'no-store' : 'public, max-age=3600',
+    });
     res.end(body);
   } catch {
-    const body = await readFile(join(publicDir, 'index.html'));
-    res.writeHead(200, { 'Content-Type': types['.html'] });
-    res.end(body);
+    res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('Unable to load portfolio');
   }
 }).listen(port, () => {
   console.log(`Portfolio running on port ${port}`);

@@ -18,7 +18,7 @@ O repositório inclui `package.json`, `server.js` e `railway.json`. Na Railway, 
 npm start
 ```
 
-A aplicação responde usando a variável `PORT` fornecida automaticamente pela Railway.
+A aplicação responde usando a variável `PORT` fornecida automaticamente pela Railway. Depois do deploy, acesse a URL pública gerada pela Railway para visualizar todo o front. O endpoint `/health` retorna o status do serviço para conferência rápida.
 
 ## Estrutura
 
@@ -26,6 +26,7 @@ A aplicação responde usando a variável `PORT` fornecida automaticamente pela 
 - `styles.css`: sistema visual responsivo black dark com gradientes, glassmorphism, grids, cards e microinterações.
 - `server.js`: servidor HTTP Node nativo para servir os arquivos estáticos em produção.
 - `railway.json`: configuração de build e start command para hospedagem na Railway.
+- `nixpacks.toml`: instrução explícita para a Railway/Nixpacks iniciar o site sem instalar dependências.
 - `assets/portfolio-preview.svg`: prévia visual versionada para ambientes sem suporte a screenshots por navegador.
 - `scripts/create-preview.js`: utilitário sem dependências para gerar uma cópia de conferência da prévia.
 
