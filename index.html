@@ -3,139 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfólio interativo para projetos de gestão, BI, dados, automação e inteligência artificial."
-    />
-    <title>Portfólio | Gestão, Dados e IA</title>
+    <meta name="description" content="Portfólio premium black dark para projetos de gestão, BI, automação, dados e inteligência artificial, pronto para deploy na Railway." />
+    <title>Portfólio Black Dark | Dados, Automação e IA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="hero">
+    <div class="page-glow" aria-hidden="true"></div>
+    <header id="topo" class="site-header">
       <nav class="navbar" aria-label="Navegação principal">
-        <a class="logo" href="#topo" aria-label="Voltar ao início">Portifólio<span>.</span></a>
+        <a class="brand" href="#topo" aria-label="Voltar ao início"><span>Portifólio</span><strong>.</strong></a>
         <div class="nav-links">
+          <a href="#sobre">Sobre</a>
           <a href="#projetos">Projetos</a>
-          <a href="#competencias">Competências</a>
+          <a href="#processo">Processo</a>
           <a href="#contato">Contato</a>
         </div>
+        <a class="nav-cta" href="#contato">Iniciar conversa</a>
       </nav>
-
-      <section id="topo" class="hero-content">
-        <p class="eyebrow">Gestão de Projetos • BI • Data Analytics • Automação • IA</p>
-        <h1>Um espaço para transformar desafios complexos em resultados mensuráveis.</h1>
-        <p class="hero-text">
-          Explore cases, dashboards e soluções escaláveis criadas para simplificar decisões,
-          otimizar processos e acelerar o crescimento de negócios.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projetos">Ver projetos</a>
-          <a class="button button-secondary" href="#contato">Fale comigo</a>
-        </div>
-      </section>
     </header>
 
     <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">UX estratégico • Black dark • Pronto para Railway</p>
+          <h1 id="hero-title">Portfólio digital com presença premium, dados claros e experiência memorável.</h1>
+          <p class="hero-text">Um front completo para apresentar cases, competências e resultados de forma moderna, persuasiva e responsiva — com estrutura pronta para hospedagem como site.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projetos">Ver cases</a>
+            <a class="button button-secondary" href="#processo">Conhecer método</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Resumo do portfólio">
+          <div class="panel-topline"><span></span><span></span><span></span></div>
+          <p class="panel-label">Performance snapshot</p>
+          <strong>+42%</strong>
+          <span class="panel-description">clareza para decisões executivas com dashboards, automações e IA aplicada.</span>
+          <div class="mini-chart" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        </aside>
+      </section>
+
       <section class="metrics" aria-label="Indicadores do portfólio">
-        <article>
-          <strong>+12</strong>
-          <span>Projetos estratégicos</span>
-        </article>
-        <article>
-          <strong>35%</strong>
-          <span>Redução média de retrabalho</span>
-        </article>
-        <article>
-          <strong>24h</strong>
-          <span>Economizadas por mês com automações</span>
-        </article>
+        <article><strong>12+</strong><span>projetos estratégicos</span></article>
+        <article><strong>24h</strong><span>economizadas por mês</span></article>
+        <article><strong>35%</strong><span>menos retrabalho médio</span></article>
+        <article><strong>100%</strong><span>layout responsivo</span></article>
+      </section>
+
+      <section id="sobre" class="section split-section">
+        <div>
+          <p class="eyebrow">Posicionamento</p>
+          <h2>Design sênior para vender confiança antes do primeiro contato.</h2>
+        </div>
+        <p>O site combina hierarquia visual forte, contraste black dark, microinterações, cards de impacto e storytelling orientado a resultado. A experiência foi pensada para recrutadores, clientes e parceiros entenderem rapidamente o valor entregue.</p>
       </section>
 
       <section id="projetos" class="section">
         <div class="section-heading">
           <p class="eyebrow">Projetos em destaque</p>
-          <h2>Cases prontos para apresentar impacto, método e resultado.</h2>
+          <h2>Cases com narrativa de problema, solução e impacto.</h2>
         </div>
         <div class="portfolio-grid">
           <article class="project-card">
+            <span class="card-index">01</span>
             <div class="card-tag">Business Intelligence</div>
             <h3>Dashboard Executivo de Performance</h3>
-            <p>
-              Painel gerencial com KPIs financeiros, operacionais e comerciais para apoiar
-              decisões semanais com dados confiáveis.
-            </p>
-            <ul>
-              <li>Modelagem de indicadores</li>
-              <li>Visualização orientada a decisão</li>
-              <li>Rotina de atualização automatizada</li>
-            </ul>
+            <p>Painel gerencial com KPIs financeiros, comerciais e operacionais para reuniões de liderança.</p>
+            <ul><li>Modelagem de indicadores</li><li>Visualização orientada a decisão</li><li>Rotina de atualização automatizada</li></ul>
           </article>
-
           <article class="project-card featured">
+            <span class="card-index">02</span>
             <div class="card-tag">Automação</div>
             <h3>Fluxo Inteligente de Processos</h3>
-            <p>
-              Automatização de tarefas repetitivas com regras de negócio, alertas e
-              integração entre ferramentas para reduzir gargalos operacionais.
-            </p>
-            <ul>
-              <li>Mapeamento ponta a ponta</li>
-              <li>Redução de tarefas manuais</li>
-              <li>Monitoramento de SLA</li>
-            </ul>
+            <p>Redesenho de tarefas repetitivas com regras de negócio, alertas, integrações e controle de SLA.</p>
+            <ul><li>Mapeamento ponta a ponta</li><li>Redução de etapas manuais</li><li>Monitoramento em tempo real</li></ul>
           </article>
-
           <article class="project-card">
+            <span class="card-index">03</span>
             <div class="card-tag">Data Analytics + IA</div>
             <h3>Análise Preditiva de Demandas</h3>
-            <p>
-              Estrutura analítica para antecipar tendências, priorizar oportunidades e
-              orientar ações com base em padrões históricos.
-            </p>
-            <ul>
-              <li>Preparação e limpeza de dados</li>
-              <li>Segmentação de oportunidades</li>
-              <li>Insights acionáveis para liderança</li>
-            </ul>
+            <p>Estrutura analítica para antecipar tendências, priorizar oportunidades e orientar decisões.</p>
+            <ul><li>Limpeza e preparação de dados</li><li>Segmentação de oportunidades</li><li>Insights acionáveis</li></ul>
           </article>
         </div>
       </section>
 
-      <section id="competencias" class="section split-section">
+      <section id="processo" class="section process-section">
+        <div class="section-heading">
+          <p class="eyebrow">Processo UX</p>
+          <h2>Uma jornada objetiva para transformar repertório em autoridade.</h2>
+        </div>
+        <div class="process-grid">
+          <article><span>01</span><h3>Diagnóstico</h3><p>Organização dos objetivos, públicos e diferenciais que precisam aparecer com mais força.</p></article>
+          <article><span>02</span><h3>Narrativa</h3><p>Construção da mensagem principal, prova de valor e sequência de seções para conversão.</p></article>
+          <article><span>03</span><h3>Interface</h3><p>Aplicação de visual dark premium, grids responsivos e componentes com acabamento profissional.</p></article>
+        </div>
+      </section>
+
+      <section class="section skills-section" aria-labelledby="skills-title">
         <div>
-          <p class="eyebrow">Competências</p>
-          <h2>Da estratégia à execução com clareza.</h2>
-          <p>
-            O espaço de portfólio organiza as principais frentes de atuação para comunicar
-            valor de forma objetiva, conectando contexto, solução e impacto de cada entrega.
-          </p>
+          <p class="eyebrow">Stack e competências</p>
+          <h2 id="skills-title">Especialidades apresentadas com leitura rápida.</h2>
         </div>
         <div class="skills-list">
-          <span>Gestão de Projetos</span>
-          <span>Power BI</span>
-          <span>SQL</span>
-          <span>Python</span>
-          <span>Process Mining</span>
-          <span>Automação no-code/low-code</span>
-          <span>IA aplicada a negócios</span>
-          <span>Storytelling com dados</span>
+          <span>Gestão de Projetos</span><span>Power BI</span><span>SQL</span><span>Python</span><span>Automação</span><span>IA aplicada</span><span>Storytelling com dados</span><span>UX Writing</span>
         </div>
       </section>
 
       <section id="contato" class="contact-card">
-        <p class="eyebrow">Vamos construir algo?</p>
-        <h2>Use este espaço para apresentar seus melhores resultados.</h2>
-        <p>
-          Personalize os cards com seus cases reais, links para dashboards, certificados e
-          formas de contato profissional.
-        </p>
-        <a class="button button-primary" href="mailto:contato@exemplo.com">Entrar em contato</a>
+        <p class="eyebrow">Pronto para publicar</p>
+        <h2>Deploy preparado para Railway com servidor Node sem dependências externas.</h2>
+        <p>Use este espaço para trocar textos, projetos e links reais. O projeto já inclui scripts de inicialização para rodar localmente e em hospedagem.</p>
+        <div class="hero-actions"><a class="button button-primary" href="mailto:contato@exemplo.com">Entrar em contato</a><a class="button button-secondary" href="#topo">Voltar ao topo</a></div>
       </section>
     </main>
   </body>

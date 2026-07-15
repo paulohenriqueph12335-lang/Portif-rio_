@@ -1,0 +1,13 @@
+{
+  "name": "portfolio-black-dark",
+  "version": "1.0.0",
+  "description": "Portfólio black dark pronto para deploy na Railway.",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "preview": "node scripts/create-preview.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
