@@ -20,6 +20,18 @@ npm start
 
 A aplicação responde usando a variável `PORT` fornecida automaticamente pela Railway. Depois do deploy, acesse a URL pública gerada pela Railway para visualizar todo o front. O endpoint `/health` retorna o status do serviço para conferência rápida.
 
+### Se aparecer "Unexposed service" na Railway
+
+O deploy pode estar **successful** e ainda assim não mostrar o site se o serviço não tiver domínio público. Para publicar a URL:
+
+1. Abra o serviço `Portif-rio_` na Railway.
+2. Entre em **Settings**.
+3. Vá até **Networking → Public Networking**.
+4. Clique em **Generate Domain**.
+5. Abra o domínio `*.up.railway.app` gerado pela Railway.
+
+Isso expõe o serviço HTTP na internet e permite visualizar o front completo.
+
 ## Estrutura
 
 - `index.html`: front completo do portfólio com hero, métricas, posicionamento, projetos, processo, competências e contato.
