@@ -1,0 +1,62 @@
+<svg width="1440" height="1200" viewBox="0 0 1440 1200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Prévia visual do espaço de portfólio</title>
+  <desc id="desc">Representação estática da landing page de portfólio com hero, métricas, cards de projetos, competências e chamada de contato.</desc>
+  <rect width="1440" height="1200" fill="#07111F"/>
+  <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 140) rotate(55) scale(620)">
+    <stop stop-color="#66E3FF" stop-opacity="0.32"/>
+    <stop offset="1" stop-color="#66E3FF" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1140 110) rotate(125) scale(520)">
+    <stop stop-color="#8B5CF6" stop-opacity="0.36"/>
+    <stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="primary" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#66E3FF"/>
+    <stop offset="1" stop-color="#8B5CF6"/>
+  </linearGradient>
+  <rect width="1440" height="1200" fill="url(#glowA)"/>
+  <rect width="1440" height="1200" fill="url(#glowB)"/>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="160" y="78" fill="#F8FBFF" font-size="25" font-weight="800">Portifólio<tspan fill="#66E3FF">.</tspan></text>
+    <text x="982" y="77" fill="#A8B3C7" font-size="16" font-weight="700">Projetos</text>
+    <text x="1078" y="77" fill="#A8B3C7" font-size="16" font-weight="700">Competências</text>
+    <text x="1222" y="77" fill="#A8B3C7" font-size="16" font-weight="700">Contato</text>
+
+    <text x="160" y="178" fill="#66E3FF" font-size="14" font-weight="800" letter-spacing="2.5">GESTÃO DE PROJETOS • BI • DATA ANALYTICS • AUTOMAÇÃO • IA</text>
+    <text x="160" y="270" fill="#F8FBFF" font-size="76" font-weight="800" letter-spacing="-4">Um espaço para transformar</text>
+    <text x="160" y="348" fill="#F8FBFF" font-size="76" font-weight="800" letter-spacing="-4">desafios complexos em</text>
+    <text x="160" y="426" fill="#F8FBFF" font-size="76" font-weight="800" letter-spacing="-4">resultados mensuráveis.</text>
+    <text x="160" y="492" fill="#A8B3C7" font-size="23">Explore cases, dashboards e soluções escaláveis criadas para simplificar decisões,</text>
+    <text x="160" y="526" fill="#A8B3C7" font-size="23">otimizar processos e acelerar o crescimento de negócios.</text>
+    <rect x="160" y="574" width="138" height="52" rx="26" fill="url(#primary)"/>
+    <text x="188" y="607" fill="#05111F" font-size="16" font-weight="800">Ver projetos</text>
+    <rect x="314" y="574" width="136" height="52" rx="26" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/>
+    <text x="342" y="607" fill="#F8FBFF" font-size="16" font-weight="800">Fale comigo</text>
+
+    <g stroke="#FFFFFF" stroke-opacity="0.12" fill="#0E1B2F" fill-opacity="0.78">
+      <rect x="160" y="704" width="350" height="112" rx="28"/>
+      <rect x="545" y="704" width="350" height="112" rx="28"/>
+      <rect x="930" y="704" width="350" height="112" rx="28"/>
+    </g>
+    <text x="190" y="761" fill="#F8FBFF" font-size="38" font-weight="800">+12</text>
+    <text x="190" y="792" fill="#A8B3C7" font-size="17">Projetos estratégicos</text>
+    <text x="575" y="761" fill="#F8FBFF" font-size="38" font-weight="800">35%</text>
+    <text x="575" y="792" fill="#A8B3C7" font-size="17">Redução média de retrabalho</text>
+    <text x="960" y="761" fill="#F8FBFF" font-size="38" font-weight="800">24h</text>
+    <text x="960" y="792" fill="#A8B3C7" font-size="17">Economizadas por mês com automações</text>
+
+    <text x="160" y="908" fill="#66E3FF" font-size="14" font-weight="800" letter-spacing="2.5">PROJETOS EM DESTAQUE</text>
+    <text x="160" y="965" fill="#F8FBFF" font-size="48" font-weight="800" letter-spacing="-2">Cases prontos para apresentar impacto, método e resultado.</text>
+    <g stroke="#FFFFFF" stroke-opacity="0.12">
+      <rect x="160" y="1016" width="350" height="132" rx="28" fill="#0E1B2F" fill-opacity="0.82"/>
+      <rect x="545" y="1016" width="350" height="132" rx="28" fill="#261E55" fill-opacity="0.86"/>
+      <rect x="930" y="1016" width="350" height="132" rx="28" fill="#0E1B2F" fill-opacity="0.82"/>
+    </g>
+    <text x="190" y="1066" fill="#66E3FF" font-size="13" font-weight="800">BUSINESS INTELLIGENCE</text>
+    <text x="190" y="1102" fill="#F8FBFF" font-size="24" font-weight="800">Dashboard Executivo</text>
+    <text x="575" y="1066" fill="#66E3FF" font-size="13" font-weight="800">AUTOMAÇÃO</text>
+    <text x="575" y="1102" fill="#F8FBFF" font-size="24" font-weight="800">Fluxo Inteligente</text>
+    <text x="960" y="1066" fill="#66E3FF" font-size="13" font-weight="800">DATA ANALYTICS + IA</text>
+    <text x="960" y="1102" fill="#F8FBFF" font-size="24" font-weight="800">Análise Preditiva</text>
+  </g>
+</svg>
