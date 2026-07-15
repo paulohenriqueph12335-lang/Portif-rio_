@@ -3,8 +3,15 @@ const { readFile } = require('node:fs/promises');
 const { extname, join, normalize, relative } = require('node:path');
 
 const publicDir = __dirname;
-const port = process.env.PORT || 3000;
-const publicFiles = new Set(['/index.html', '/styles.css', '/assets/portfolio-preview.svg', '/assets/portfolio-preview.generated.svg']);
+const port = Number(process.env.PORT) || 3000;
+const host = process.env.HOST || '0.0.0.0';
+const publicFiles = new Set([
+  '/index.html',
+  '/styles.css',
+  '/assets/portfolio-preview.svg',
+  '/assets/portfolio-preview.generated.svg',
+  '/favicon.svg',
+]);
 const types = {
   '.html': 'text/html; charset=utf-8',
   '.css': 'text/css; charset=utf-8',
@@ -25,7 +32,7 @@ function resolvePublicPath(url) {
 }
 
 createServer(async (req, res) => {
-  if (req.url === '/health') {
+  if ((req.url || '').split('?')[0] === '/health') {
     res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
     res.end(JSON.stringify({ status: 'ok', service: 'portfolio-black-dark' }));
     return;
@@ -50,6 +57,6 @@ createServer(async (req, res) => {
     res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
     res.end('Unable to load portfolio');
   }
-}).listen(port, () => {
-  console.log(`Portfolio running on port ${port}`);
+}).listen(port, host, () => {
+  console.log(`Portfolio running at http://${host}:${port}`);
 });

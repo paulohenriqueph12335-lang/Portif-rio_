@@ -8,7 +8,7 @@ Portfólio web em português com estética **black dark**, foco em UX sênior, s
 npm start
 ```
 
-O servidor Node sem dependências externas usa a porta definida em `PORT` ou `3000` por padrão. Depois de iniciar, acesse `http://localhost:3000`.
+O servidor Node sem dependências externas usa a porta definida em `PORT` ou `3000` por padrão e escuta em `0.0.0.0`, que é o host esperado por plataformas como a Railway. Depois de iniciar, acesse `http://localhost:3000`.
 
 ## Deploy na Railway
 
@@ -18,7 +18,7 @@ O repositório inclui `package.json`, `server.js` e `railway.json`. Na Railway, 
 npm start
 ```
 
-A aplicação responde usando a variável `PORT` fornecida automaticamente pela Railway. Depois do deploy, acesse a URL pública gerada pela Railway para visualizar todo o front. O endpoint `/health` retorna o status do serviço para conferência rápida.
+A aplicação responde usando a variável `PORT` fornecida automaticamente pela Railway e faz bind em `0.0.0.0` para aceitar tráfego externo. Depois do deploy, acesse a URL pública gerada pela Railway para visualizar todo o front. O endpoint `/health` retorna o status do serviço para conferência rápida.
 
 ### Se aparecer "Unexposed service" na Railway
 
