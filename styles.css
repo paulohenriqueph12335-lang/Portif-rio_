@@ -154,6 +154,7 @@ dd { margin: 0; color: var(--signal); font: 600 clamp(1.6rem, 6vw, 3rem)/1 var(-
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
 .footer-inner p { margin: 0; }
 .footer-inner a { color: var(--ink); font-weight: 700; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 1rem; }
 
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .55s ease, transform .55s ease; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
