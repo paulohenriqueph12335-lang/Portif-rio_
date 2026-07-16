@@ -1,142 +1,219 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfólio interativo para projetos de gestão, BI, dados, automação e inteligência artificial."
-    />
-    <title>Portfólio | Gestão, Dados e IA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="hero">
-      <nav class="navbar" aria-label="Navegação principal">
-        <a class="logo" href="#topo" aria-label="Voltar ao início">Portifólio<span>.</span></a>
-        <div class="nav-links">
-          <a href="#projetos">Projetos</a>
-          <a href="#competencias">Competências</a>
-          <a href="#contato">Contato</a>
-        </div>
-      </nav>
+<!DOCTYPE html>
+<html lang="pt-BR" id="topo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paulo Henrique Santos Brito — Customer Success &amp; CX</title>
+  <meta name="description" content="Portfólio profissional de Paulo Henrique Santos Brito — Customer Success, CX, Gestão de Projetos e Prospecção B2B. Cases, método e resultados mensuráveis.">
+  <meta property="og:title" content="Paulo Henrique Santos Brito — Customer Success &amp; CX">
+  <meta property="og:description" content="Portfólio profissional de Paulo Henrique Santos Brito — Customer Success, CX, Gestão de Projetos e Prospecção B2B. Cases, método e resultados mensuráveis.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portif-rio-production.up.railway.app/">
+  <link rel="canonical" href="https://portif-rio-production.up.railway.app/">
+  <meta name="theme-color" content="#F5F3EC">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-      <section id="topo" class="hero-content">
-        <p class="eyebrow">Gestão de Projetos • BI • Data Analytics • Automação • IA</p>
-        <h1>Um espaço para transformar desafios complexos em resultados mensuráveis.</h1>
-        <p class="hero-text">
-          Explore cases, dashboards e soluções escaláveis criadas para simplificar decisões,
-          otimizar processos e acelerar o crescimento de negócios.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projetos">Ver projetos</a>
-          <a class="button button-secondary" href="#contato">Fale comigo</a>
-        </div>
-      </section>
-    </header>
+  <header class="site-header" aria-label="Cabeçalho principal">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="#topo" aria-label="Paulo Henrique — início">
+        <span class="brand-mark" aria-hidden="true">PH</span>
+        <span>Paulo Henrique</span>
+      </a>
 
-    <main>
-      <section class="metrics" aria-label="Indicadores do portfólio">
-        <article>
-          <strong>+12</strong>
-          <span>Projetos estratégicos</span>
-        </article>
-        <article>
-          <strong>35%</strong>
-          <span>Redução média de retrabalho</span>
-        </article>
-        <article>
-          <strong>24h</strong>
-          <span>Economizadas por mês com automações</span>
-        </article>
-      </section>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+      </button>
 
-      <section id="projetos" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Projetos em destaque</p>
-          <h2>Cases prontos para apresentar impacto, método e resultado.</h2>
+      <div class="nav-links" id="nav-links">
+        <a href="#projetos"><span>01</span> Cases</a>
+        <a href="#metodo"><span>02</span> Método</a>
+        <a href="#competencias"><span>03</span> Competências</a>
+        <a href="#formacao"><span>04</span> Formação</a>
+        <a class="nav-cta" href="#contato">Contato</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Customer Success · CX · Gestão de Projetos · Prospecção B2B</p>
+          <h1 id="hero-title">Transformo relacionamento com o cliente em <em>receita previsível</em>.</h1>
+          <p class="hero-text">Estruturo processos de prospecção, onboarding e retenção — combinando CRM, automação e IA — para reduzir custo operacional e aumentar conversão sem perder a experiência do cliente.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projetos">Ver cases</a>
+            <a class="btn btn-secondary" href="#contato">Falar comigo</a>
+          </div>
         </div>
-        <div class="portfolio-grid">
-          <article class="project-card">
-            <div class="card-tag">Business Intelligence</div>
-            <h3>Dashboard Executivo de Performance</h3>
-            <p>
-              Painel gerencial com KPIs financeiros, operacionais e comerciais para apoiar
-              decisões semanais com dados confiáveis.
-            </p>
+
+        <aside class="readout reveal" aria-label="Painel geral de métricas">
+          <div class="readout-head">
+            <span>painel_geral</span>
+            <span class="status">● atualizado</span>
+          </div>
+          <dl>
+            <div>
+              <dt>escala de prospecção por e-mail</dt>
+              <dd>500x</dd>
+            </div>
+            <div>
+              <dt>aumento na conversão de leads</dt>
+              <dd>10%</dd>
+            </div>
+            <div>
+              <dt>redução de custos operacionais</dt>
+              <dd>16%</dd>
+            </div>
+            <div>
+              <dt>tempo em relacionamento multi-conta</dt>
+              <dd>2a 10m</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="projetos" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Cases em destaque</p>
+          <h2 id="projects-title">Resultados mensuráveis em relacionamento, dados e operação.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="card-meta"><span>Prospecção B2B · Automação</span><span>2025 — atual</span></div>
+            <h3>CRM de Prospecção via E-mail — Traduzzo</h3>
+            <p>Liderança no desenvolvimento do primeiro CRM de prospecção por e-mail da empresa, com IA aplicada à automação de processos e às estratégias de negociação.</p>
             <ul>
-              <li>Modelagem de indicadores</li>
-              <li>Visualização orientada a decisão</li>
-              <li>Rotina de atualização automatizada</li>
+              <li>Escala de 20 para +10.000 e-mails/dia</li>
+              <li>+10% na taxa de conversão de leads</li>
+              <li>−16% nos custos operacionais</li>
             </ul>
+            <a href="#contato">Falar sobre este case →</a>
           </article>
 
-          <article class="project-card featured">
-            <div class="card-tag">Automação</div>
-            <h3>Fluxo Inteligente de Processos</h3>
-            <p>
-              Automatização de tarefas repetitivas com regras de negócio, alertas e
-              integração entre ferramentas para reduzir gargalos operacionais.
-            </p>
+          <article class="project-card featured reveal">
+            <div class="card-meta"><span>Customer Success · CX</span><span>2 anos e 10 meses</span></div>
+            <h3>Relacionamento Multi-conta — Atento Brasil</h3>
+            <p>Especialista em Relacionamento e Suporte Estratégico atendendo três contas simultâneas, cada uma com um desafio de CX diferente.</p>
             <ul>
-              <li>Mapeamento ponta a ponta</li>
-              <li>Redução de tarefas manuais</li>
-              <li>Monitoramento de SLA</li>
+              <li>Samsung: liderança de suporte técnico de 45 pessoas, treinamentos e KPIs/SLAs — Funcionário do Mês</li>
+              <li>Livelo: onboarding e cross-sell com foco em evolução do NPS</li>
+              <li>UOL: projeto “Anjo da Guarda” — redução de cancelamentos e mais retenção</li>
             </ul>
+            <a href="#contato">Falar sobre este case →</a>
           </article>
 
-          <article class="project-card">
-            <div class="card-tag">Data Analytics + IA</div>
-            <h3>Análise Preditiva de Demandas</h3>
-            <p>
-              Estrutura analítica para antecipar tendências, priorizar oportunidades e
-              orientar ações com base em padrões históricos.
-            </p>
+          <article class="project-card reveal">
+            <div class="card-meta"><span>Gestão de Processos</span><span>9 meses</span></div>
+            <h3>Agendamento Estratégico — Toyota</h3>
+            <p>Otimização da agenda operacional e da prospecção de clientes como Agendador Estratégico, com foco em conversão e experiência do cliente.</p>
             <ul>
-              <li>Preparação e limpeza de dados</li>
-              <li>Segmentação de oportunidades</li>
-              <li>Insights acionáveis para liderança</li>
+              <li>Otimização de agenda operacional</li>
+              <li>Aumento na conversão de agendamentos</li>
+              <li>Melhoria do NPS</li>
             </ul>
+            <a href="#contato">Falar sobre este case →</a>
           </article>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="competencias" class="section split-section">
-        <div>
-          <p class="eyebrow">Competências</p>
-          <h2>Da estratégia à execução com clareza.</h2>
-          <p>
-            O espaço de portfólio organiza as principais frentes de atuação para comunicar
-            valor de forma objetiva, conectando contexto, solução e impacto de cada entrega.
-          </p>
+    <section class="section analytics-section" aria-labelledby="analytics-title">
+      <div class="container split-section">
+        <div class="section-header reveal">
+          <p class="eyebrow">Leitura visual de dados</p>
+          <h2 id="analytics-title">Dashboards posicionados como evidência de método.</h2>
+          <p>As imagens de mapas, séries temporais e tabelas ficam em um painel curado para reforçar domínio analítico sem competir com os cases principais.</p>
         </div>
-        <div class="skills-list">
-          <span>Gestão de Projetos</span>
-          <span>Power BI</span>
-          <span>SQL</span>
-          <span>Python</span>
-          <span>Process Mining</span>
-          <span>Automação no-code/low-code</span>
-          <span>IA aplicada a negócios</span>
-          <span>Storytelling com dados</span>
+        <div class="analytics-board reveal" aria-label="Composição visual inspirada nas imagens de dashboards fornecidas">
+          <div class="viz-card viz-map"><span>mapa de distribuição</span></div>
+          <div class="viz-card viz-area"><span>série temporal</span></div>
+          <div class="viz-card viz-table"><span>tabela dinâmica</span></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section id="contato" class="contact-card">
-        <p class="eyebrow">Vamos construir algo?</p>
-        <h2>Use este espaço para apresentar seus melhores resultados.</h2>
-        <p>
-          Personalize os cards com seus cases reais, links para dashboards, certificados e
-          formas de contato profissional.
-        </p>
-        <a class="button button-primary" href="mailto:contato@exemplo.com">Entrar em contato</a>
-      </section>
-    </main>
-  </body>
+    <section class="section" id="metodo" aria-labelledby="method-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Método</p>
+          <h2 id="method-title">Da prospecção à retenção, sem pular etapa.</h2>
+        </div>
+        <ol class="method-grid">
+          <li class="method-item reveal"><span>01</span><h3>Diagnóstico</h3><p>Mapeio a jornada real do cliente e identifico onde a conversão ou a retenção hoje travam.</p></li>
+          <li class="method-item reveal"><span>02</span><h3>Estruturação</h3><p>Defino processo, CRM e indicadores (KPIs/SLAs/NPS) que sustentam a operação.</p></li>
+          <li class="method-item reveal"><span>03</span><h3>Execução</h3><p>Conduzo prospecção, onboarding e negociação, com automação e IA reduzindo trabalho manual.</p></li>
+          <li class="method-item reveal"><span>04</span><h3>Retenção &amp; growth</h3><p>Acompanho NPS/CSAT e churn, e ajusto a operação com base no que o cliente mostra.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section split-section container" id="competencias" aria-labelledby="skills-title">
+      <div class="section-header reveal">
+        <p class="eyebrow">Competências</p>
+        <h2 id="skills-title">Da estratégia à execução, com clareza.</h2>
+        <p>Frentes que uso para conectar relacionamento com o cliente, processo e tecnologia em cada entrega.</p>
+      </div>
+      <div class="skill-groups reveal">
+        <div class="skill-group"><h3>Customer Success</h3><div><span>Onboarding</span><span>Retenção</span><span>Churn Prevention</span><span>Jornada do Cliente</span><span>NPS</span><span>CSAT</span></div></div>
+        <div class="skill-group"><h3>Gestão</h3><div><span>Gestão de Projetos</span><span>Otimização de Processos</span><span>Liderança de Equipes</span><span>KPIs/SLAs</span></div></div>
+        <div class="skill-group"><h3>Vendas &amp; Negócios</h3><div><span>Prospecção B2B</span><span>Vendas Consultivas</span><span>Cross-sell</span><span>Negociação Estratégica</span></div></div>
+        <div class="skill-group"><h3>Tecnologia</h3><div><span>CRM</span><span>IA para Automação</span><span>Análise de Dados</span><span>Pacote Office Avançado</span></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="formacao" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="eyebrow">Formação &amp; Certificações</p>
+          <h2 id="education-title">Aprendizado contínuo, aplicado ao trabalho.</h2>
+        </div>
+        <ul class="education-list reveal">
+          <li>Publicidade e Propaganda — FMU (cursando)</li>
+          <li>Análise de Dados — Matecademy Brasil (em andamento)</li>
+          <li>Web Designer — Net Brasil (120h)</li>
+          <li>Informática Profissionalizante — Colégio Nippo (160h)</li>
+          <li>Inglês — Nível B1/B2</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="contato" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-card reveal">
+          <p class="eyebrow">Vamos conversar?</p>
+          <h2 id="contact-title">Aberto a novas oportunidades em CS, CX e Gestão de Projetos.</h2>
+          <p>Diadema – SP · atendimento remoto ou presencial na Grande São Paulo.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="mailto:paulohenrique.ph12335@gmail.com">Enviar e-mail</a>
+            <a class="btn btn-secondary dark" href="tel:+5511993518961">(11) 99351-8961</a>
+            <a class="btn btn-secondary dark" href="https://www.linkedin.com/in/paulo-henrique-santos-brito-801a51206" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn-secondary dark" href="https://portif-rio-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Site no Railway</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="current-year"></span> Paulo Henrique Santos Brito. Todos os direitos reservados.</p>
+      <div class="footer-links">
+        <a href="https://portif-rio-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Railway ↗</a>
+        <a href="#topo">Voltar ao topo ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
