@@ -109,7 +109,7 @@ em{color:var(--signal);font-style:normal;}
 .hero{
   position:relative;z-index:2;height:100%;
   display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:center;
-  padding:0 44px;max-width:1180px;
+  padding:0 44px;max-width:1180px;margin-inline:auto;
 }
 .hero .eyebrow{
   font-family:var(--font-mono);font-size:12px;letter-spacing:.12em;color:var(--teal);
@@ -176,12 +176,12 @@ em{color:var(--signal);font-style:normal;}
 }
 .back-link{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--text-2);transition:.25s var(--ease);}
 .back-link:hover{color:var(--text-1);}
-.projects-header{padding:8px 44px 40px;max-width:900px;}
+.projects-header{padding:8px 44px 40px;max-width:900px;margin-inline:auto;}
 .projects-header .eyebrow{font-family:var(--font-mono);font-size:12px;letter-spacing:.1em;color:var(--teal);text-transform:uppercase;margin-bottom:14px;font-weight:600;}
 .projects-header h2{font-family:var(--font-display);font-weight:600;font-size:clamp(28px,3.6vw,40px);letter-spacing:-.01em;line-height:1.15;}
 .projects-header p{margin-top:14px;color:var(--text-2);font-size:15.5px;max-width:560px;line-height:1.6;}
 
-.projects-list{padding:0 44px 80px;max-width:1120px;}
+.projects-list{padding:0 44px 80px;max-width:1120px;margin-inline:auto;}
 .project-row{
   display:grid;grid-template-columns:210px 1fr auto;gap:30px;align-items:center;
   padding:26px 20px;border-top:1px solid var(--hair);cursor:pointer;
