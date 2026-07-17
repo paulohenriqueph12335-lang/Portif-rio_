@@ -4,214 +4,133 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paulo Henrique Santos Brito — Customer Success &amp; CX</title>
-  <meta name="description" content="Portfólio profissional de Paulo Henrique Santos Brito — Customer Success, CX, Gestão de Projetos e Prospecção B2B. Cases, método e resultados mensuráveis.">
+  <meta name="description" content="Portfólio profissional de Paulo Henrique Santos Brito — Customer Success, CX, Gestão de Projetos e Prospecção B2B. Workspace interativo com cases, método e resultados mensuráveis.">
   <meta property="og:title" content="Paulo Henrique Santos Brito — Customer Success &amp; CX">
-  <meta property="og:description" content="Portfólio profissional de Paulo Henrique Santos Brito — Customer Success, CX, Gestão de Projetos e Prospecção B2B. Cases, método e resultados mensuráveis.">
+  <meta property="og:description" content="Workspace interativo: cases de Customer Success, CX, Gestão de Projetos e Prospecção B2B, com dashboards, método e resultados.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://portif-rio-production.up.railway.app/">
   <link rel="canonical" href="https://portif-rio-production.up.railway.app/">
-  <meta name="theme-color" content="#F5F3EC">
+  <meta name="theme-color" content="#14171f">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <header class="site-header" aria-label="Cabeçalho principal">
-    <nav class="nav container" aria-label="Navegação principal">
-      <a class="brand" href="#topo" aria-label="Paulo Henrique — início">
-        <span class="brand-mark" aria-hidden="true">PH</span>
-        <span>Paulo Henrique</span>
-      </a>
+  <!-- Cluster de contato fixo — visível em todas as views, como uma barra de sistema -->
+  <div class="contact-cluster" aria-label="Contato rápido">
+    <a href="mailto:paulohenrique.ph12335@gmail.com" aria-label="Enviar e-mail" title="E-mail">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3 6h18v12H3z" stroke="currentColor" stroke-width="1.4"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.4"/></svg>
+    </a>
+    <a href="tel:+5511993518961" aria-label="Ligar" title="(11) 99351-8961">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M5 4c0 8.8 6.2 15 15 15l1-4-5-2-2 2c-2.5-1.2-4.8-3.5-6-6l2-2-2-5-4-1z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/paulo-henrique-santos-brito-801a51206" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.4"/><path d="M7.5 10v6.5M7.5 7.6v.1M12 16.5V13c0-1.4 1-2.5 2.5-2.5S17 11.6 17 13v3.5M12 10.5v6" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+    </a>
+  </div>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu">
-        <span></span>
-        <span></span>
-      </button>
+  <div id="app">
 
-      <div class="nav-links" id="nav-links">
-        <a href="#projetos"><span>01</span> Cases</a>
-        <a href="#metodo"><span>02</span> Método</a>
-        <a href="#competencias"><span>03</span> Competências</a>
-        <a href="#formacao"><span>04</span> Formação</a>
-        <a class="nav-cta" href="#contato">Contato</a>
-      </div>
-    </nav>
-  </header>
+    <!-- ============================================================
+         HOME
+         ============================================================ -->
+    <section id="view-home" class="view active" aria-label="Início">
+      <canvas class="home-canvas" id="homeCanvas" aria-hidden="true"></canvas>
 
-  <main id="conteudo">
-    <section class="hero section" aria-labelledby="hero-title">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Customer Success · CX · Gestão de Projetos · Prospecção B2B</p>
-          <h1 id="hero-title">Transformo relacionamento com o cliente em <em>receita previsível</em>.</h1>
-          <p class="hero-text">Estruturo processos de prospecção, onboarding e retenção — combinando CRM, automação e IA — para reduzir custo operacional e aumentar conversão sem perder a experiência do cliente.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="#projetos">Ver cases</a>
-            <a class="btn btn-secondary" href="#contato">Falar comigo</a>
-          </div>
+      <nav class="home-nav">
+        <a class="brandmark" href="#topo">
+          <span class="brand-mark">PH</span>
+          <span>Paulo Henrique</span>
+        </a>
+        <button class="nav-link" data-nav="projects">Ver cases</button>
+      </nav>
+
+      <div class="hero" id="conteudo">
+        <p class="eyebrow">Customer Success · CX · Gestão de Projetos · Prospecção B2B</p>
+        <h1>Transformo relacionamento<br>com o cliente em <em>receita previsível.</em></h1>
+        <p class="role">Estruturo processos de prospecção, onboarding e retenção — combinando CRM, automação e IA — para reduzir custo operacional e aumentar conversão sem perder a experiência do cliente.</p>
+        <div class="cta-row">
+          <button class="btn-primary" data-nav="projects">
+            Explorar Workspace
+            <svg viewBox="0 0 16 16" fill="none" width="15" height="15"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <a class="btn-ghost" href="mailto:paulohenrique.ph12335@gmail.com">paulohenrique.ph12335@gmail.com</a>
         </div>
 
-        <aside class="readout reveal" aria-label="Painel geral de métricas">
-          <div class="readout-head">
-            <span>painel_geral</span>
-            <span class="status">● atualizado</span>
-          </div>
+        <aside class="readout" aria-label="Painel geral de indicadores">
+          <div class="readout-head"><span>painel_geral</span><span class="status">● atualizado</span></div>
           <dl>
-            <div>
-              <dt>escala de prospecção por e-mail</dt>
-              <dd>500x</dd>
-            </div>
-            <div>
-              <dt>aumento na conversão de leads</dt>
-              <dd>10%</dd>
-            </div>
-            <div>
-              <dt>redução de custos operacionais</dt>
-              <dd>16%</dd>
-            </div>
-            <div>
-              <dt>tempo em relacionamento multi-conta</dt>
-              <dd>2a 10m</dd>
-            </div>
+            <div><dt>escala de prospecção por e-mail</dt><dd>500x</dd></div>
+            <div><dt>aumento na conversão de leads</dt><dd>+10%</dd></div>
+            <div><dt>redução de custos operacionais</dt><dd>−16%</dd></div>
+            <div><dt>tempo em relacionamento multi-conta</dt><dd>2a 10m</dd></div>
           </dl>
         </aside>
       </div>
+
+      <div class="home-status"><span class="pulse"></span><span id="statusLine">SISTEMA ONLINE · Diadema, SP</span></div>
     </section>
 
-    <section class="section" id="projetos" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">Cases em destaque</p>
-          <h2 id="projects-title">Resultados mensuráveis em relacionamento, dados e operação.</h2>
-        </div>
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="card-meta"><span>Prospecção B2B · Automação</span><span>2025 — atual</span></div>
-            <h3>CRM de Prospecção via E-mail — Traduzzo</h3>
-            <p>Liderança no desenvolvimento do primeiro CRM de prospecção por e-mail da empresa, com IA aplicada à automação de processos e às estratégias de negociação.</p>
-            <ul>
-              <li>Escala de 20 para +10.000 e-mails/dia</li>
-              <li>+10% na taxa de conversão de leads</li>
-              <li>−16% nos custos operacionais</li>
-            </ul>
-            <a href="#contato">Falar sobre este case →</a>
-          </article>
+    <!-- ============================================================
+         PROJECTS
+         ============================================================ -->
+    <section id="view-projects" class="view" aria-label="Cases">
+      <nav class="projects-nav">
+        <button class="back-link" data-nav="home">
+          <svg viewBox="0 0 16 16" fill="none" width="13" height="13"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Início
+        </button>
+        <a class="brandmark" href="#topo"><span class="brand-mark">PH</span><span>Paulo Henrique</span></a>
+      </nav>
 
-          <article class="project-card featured reveal">
-            <div class="card-meta"><span>Customer Success · CX</span><span>2 anos e 10 meses</span></div>
-            <h3>Relacionamento Multi-conta — Atento Brasil</h3>
-            <p>Especialista em Relacionamento e Suporte Estratégico atendendo três contas simultâneas, cada uma com um desafio de CX diferente.</p>
-            <ul>
-              <li>Samsung: liderança de suporte técnico de 45 pessoas, treinamentos e KPIs/SLAs — Funcionário do Mês</li>
-              <li>Livelo: onboarding e cross-sell com foco em evolução do NPS</li>
-              <li>UOL: projeto “Anjo da Guarda” — redução de cancelamentos e mais retenção</li>
-            </ul>
-            <a href="#contato">Falar sobre este case →</a>
-          </article>
+      <header class="projects-header">
+        <p class="eyebrow">Cases em destaque</p>
+        <h2>Cada case abre como um ambiente de trabalho — não como uma página.</h2>
+        <p>Selecione um case para entrar no workspace: dashboards, método, contas, resultados e documentação organizados em janelas independentes.</p>
+      </header>
 
-          <article class="project-card reveal">
-            <div class="card-meta"><span>Gestão de Processos</span><span>9 meses</span></div>
-            <h3>Agendamento Estratégico — Toyota</h3>
-            <p>Otimização da agenda operacional e da prospecção de clientes como Agendador Estratégico, com foco em conversão e experiência do cliente.</p>
-            <ul>
-              <li>Otimização de agenda operacional</li>
-              <li>Aumento na conversão de agendamentos</li>
-              <li>Melhoria do NPS</li>
-            </ul>
-            <a href="#contato">Falar sobre este case →</a>
-          </article>
-        </div>
-      </div>
+      <div class="projects-list" id="projectsList"></div>
     </section>
 
-    <section class="section analytics-section" aria-labelledby="analytics-title">
-      <div class="container split-section">
-        <div class="section-header reveal">
-          <p class="eyebrow">Leitura visual de dados</p>
-          <h2 id="analytics-title">Dashboards posicionados como evidência de método.</h2>
-          <p>As imagens de mapas, séries temporais e tabelas ficam em um painel curado para reforçar domínio analítico sem competir com os cases principais.</p>
+    <!-- ============================================================
+         WORKSPACE
+         ============================================================ -->
+    <section id="view-workspace" class="view" aria-label="Workspace do case">
+      <div class="ws-topbar">
+        <div class="ws-topbar-left">
+          <button class="ws-back" data-nav="projects">
+            <svg viewBox="0 0 16 16" fill="none" width="13" height="13"><path d="M13 8H3M7 4L3 8l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Cases
+          </button>
+          <div class="ws-title">Workspace / <b id="wsProjectTitle">—</b></div>
         </div>
-        <div class="analytics-board reveal" aria-label="Composição visual inspirada nas imagens de dashboards fornecidas">
-          <div class="viz-card viz-map"><span>mapa de distribuição</span></div>
-          <div class="viz-card viz-area"><span>série temporal</span></div>
-          <div class="viz-card viz-table"><span>tabela dinâmica</span></div>
+        <div class="ws-topbar-right">
+          <span id="wsOpenCount">0 janelas abertas</span>
+          <div class="ws-clock"><span class="pulse"></span><span id="wsClock">00:00:00</span></div>
         </div>
       </div>
-    </section>
 
-    <section class="section" id="metodo" aria-labelledby="method-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">Método</p>
-          <h2 id="method-title">Da prospecção à retenção, sem pular etapa.</h2>
-        </div>
-        <ol class="method-grid">
-          <li class="method-item reveal"><span>01</span><h3>Diagnóstico</h3><p>Mapeio a jornada real do cliente e identifico onde a conversão ou a retenção hoje travam.</p></li>
-          <li class="method-item reveal"><span>02</span><h3>Estruturação</h3><p>Defino processo, CRM e indicadores (KPIs/SLAs/NPS) que sustentam a operação.</p></li>
-          <li class="method-item reveal"><span>03</span><h3>Execução</h3><p>Conduzo prospecção, onboarding e negociação, com automação e IA reduzindo trabalho manual.</p></li>
-          <li class="method-item reveal"><span>04</span><h3>Retenção &amp; growth</h3><p>Acompanho NPS/CSAT e churn, e ajusto a operação com base no que o cliente mostra.</p></li>
-        </ol>
-      </div>
-    </section>
+      <div class="ws-body">
+        <aside class="ws-dock-left" id="wsDock" aria-label="Módulos do case"></aside>
 
-    <section class="section split-section container" id="competencias" aria-labelledby="skills-title">
-      <div class="section-header reveal">
-        <p class="eyebrow">Competências</p>
-        <h2 id="skills-title">Da estratégia à execução, com clareza.</h2>
-        <p>Frentes que uso para conectar relacionamento com o cliente, processo e tecnologia em cada entrega.</p>
-      </div>
-      <div class="skill-groups reveal">
-        <div class="skill-group"><h3>Customer Success</h3><div><span>Onboarding</span><span>Retenção</span><span>Churn Prevention</span><span>Jornada do Cliente</span><span>NPS</span><span>CSAT</span></div></div>
-        <div class="skill-group"><h3>Gestão</h3><div><span>Gestão de Projetos</span><span>Otimização de Processos</span><span>Liderança de Equipes</span><span>KPIs/SLAs</span></div></div>
-        <div class="skill-group"><h3>Vendas &amp; Negócios</h3><div><span>Prospecção B2B</span><span>Vendas Consultivas</span><span>Cross-sell</span><span>Negociação Estratégica</span></div></div>
-        <div class="skill-group"><h3>Tecnologia</h3><div><span>CRM</span><span>IA para Automação</span><span>Análise de Dados</span><span>Pacote Office Avançado</span></div></div>
-      </div>
-    </section>
-
-    <section class="section" id="formacao" aria-labelledby="education-title">
-      <div class="container">
-        <div class="section-header reveal">
-          <p class="eyebrow">Formação &amp; Certificações</p>
-          <h2 id="education-title">Aprendizado contínuo, aplicado ao trabalho.</h2>
-        </div>
-        <ul class="education-list reveal">
-          <li>Publicidade e Propaganda — FMU (cursando)</li>
-          <li>Análise de Dados — Matecademy Brasil (em andamento)</li>
-          <li>Web Designer — Net Brasil (120h)</li>
-          <li>Informática Profissionalizante — Colégio Nippo (160h)</li>
-          <li>Inglês — Nível B1/B2</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="contato" aria-labelledby="contact-title">
-      <div class="container">
-        <div class="contact-card reveal">
-          <p class="eyebrow">Vamos conversar?</p>
-          <h2 id="contact-title">Aberto a novas oportunidades em CS, CX e Gestão de Projetos.</h2>
-          <p>Diadema – SP · atendimento remoto ou presencial na Grande São Paulo.</p>
-          <div class="actions">
-            <a class="btn btn-primary" href="mailto:paulohenrique.ph12335@gmail.com">Enviar e-mail</a>
-            <a class="btn btn-secondary dark" href="tel:+5511993518961">(11) 99351-8961</a>
-            <a class="btn btn-secondary dark" href="https://www.linkedin.com/in/paulo-henrique-santos-brito-801a51206" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a class="btn btn-secondary dark" href="https://portif-rio-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Site no Railway</a>
+        <div class="ws-canvas" id="wsCanvas">
+          <div class="ws-canvas-empty" id="wsEmpty">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M3 9h18" stroke="currentColor" stroke-width="1.4"/></svg>
+            <p>Selecione um módulo na barra lateral para abrir uma janela.</p>
           </div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="current-year"></span> Paulo Henrique Santos Brito. Todos os direitos reservados.</p>
-      <div class="footer-links">
-        <a href="https://portif-rio-production.up.railway.app/" target="_blank" rel="noopener noreferrer">Railway ↗</a>
-        <a href="#topo">Voltar ao topo ↑</a>
-      </div>
-    </div>
+      <div class="ws-taskbar" id="wsTaskbar"></div>
+    </section>
+
+  </div>
+
+  <footer class="sr-footer">
+    <p>© <span id="current-year"></span> Paulo Henrique Santos Brito. Diadema – SP · atendimento remoto ou presencial na Grande São Paulo.</p>
   </footer>
 
   <script src="script.js"></script>
