@@ -117,7 +117,7 @@ dd { margin: 0; color: var(--signal); font: 600 clamp(1.6rem, 6vw, 3rem)/1 var(-
 
 .section-header { margin-bottom: 2rem; max-width: 760px; }
 .project-grid, .method-grid { display: grid; gap: 1rem; }
-.project-card, .method-item, .skill-groups, .analytics-board { background: var(--paper-2); border: 1px solid var(--line); border-radius: 18px; }
+.project-card, .method-item, .skill-groups { background: var(--paper-2); border: 1px solid var(--line); border-radius: 18px; }
 .project-card { padding: 1.35rem; display: flex; flex-direction: column; gap: 1rem; transition: transform .2s ease, border-color .2s ease; }
 .project-card:hover { transform: translateY(-4px); border-color: var(--line-strong); }
 .project-card.featured { background: var(--ink); color: #fff; }
@@ -130,12 +130,30 @@ dd { margin: 0; color: var(--signal); font: 600 clamp(1.6rem, 6vw, 3rem)/1 var(-
 .project-card a { margin-top: auto; color: var(--signal); font-weight: 700; }
 
 .analytics-section { padding-top: 1rem; }
-.analytics-board { display: grid; grid-template-columns: 1fr; gap: .75rem; padding: .75rem; }
-.viz-card { min-height: 160px; border: 1px solid var(--line); border-radius: 14px; background: #f8faf9; position: relative; overflow: hidden; }
-.viz-card span { position: absolute; left: .8rem; top: .8rem; font: 600 .72rem var(--font-mono); color: var(--teal); background: rgba(255,255,255,.8); padding: .35rem .5rem; border-radius: 999px; }
-.viz-map { background-image: radial-gradient(circle at 25% 45%, #48739a 0 8%, transparent 8.5%), radial-gradient(circle at 70% 42%, #b7dfd9 0 7%, transparent 7.5%), radial-gradient(circle at 54% 62%, #b7dfd9 0 5%, transparent 5.5%), linear-gradient(#eef0ee, #fff); }
-.viz-area { background-image: linear-gradient(110deg, rgba(73,116,154,.6) 0 58%, rgba(255,154,73,.68) 58% 100%), repeating-linear-gradient(90deg, transparent 0 12px, rgba(255,255,255,.3) 12px 13px); }
-.viz-table { background-image: linear-gradient(#f6c64b 0 24%, transparent 24%), repeating-linear-gradient(#86a9dd 0 25%, #bcd0ed 25% 50%); }
+.timeline { list-style: none; display: grid; gap: 1.5rem; counter-reset: tl; }
+.timeline-step { display: grid; gap: 1rem; grid-template-columns: 44px 1fr; }
+.timeline-marker { display: flex; flex-direction: column; align-items: center; }
+.timeline-marker span {
+  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
+  background: var(--ink); color: #fff; font-family: var(--font-mono); font-size: .82rem; font-weight: 700; flex: 0 0 auto;
+}
+.timeline-step:not(:last-child) .timeline-marker::after {
+  content: ""; flex: 1 1 auto; width: 2px; background: var(--line-strong); margin-top: .5rem; min-height: 2rem;
+}
+.timeline-card {
+  background: var(--paper-2); border: 1px solid var(--line); border-radius: 18px; padding: 1.35rem;
+  display: grid; gap: .6rem;
+}
+.timeline-tag { font-family: var(--font-mono); font-size: .76rem; color: var(--teal); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin: 0; }
+.timeline-card h3 { font-size: 1.3rem; }
+.timeline-card p:not(.timeline-tag) { color: var(--ink-soft); margin: 0; }
+.timeline-card img { width: 100%; border-radius: 12px; border: 1px solid var(--line); margin-top: .4rem; }
+
+@media (min-width: 721px) {
+  .timeline-step { grid-template-columns: 56px 1fr; }
+  .timeline-marker span { width: 48px; height: 48px; font-size: .9rem; }
+}
+
 
 .method-grid { counter-reset: step; list-style: none; }
 .method-item { padding: 1.3rem; list-style: none; }
@@ -165,8 +183,6 @@ dd { margin: 0; color: var(--signal); font: 600 clamp(1.6rem, 6vw, 3rem)/1 var(-
   .nav-links a { padding: .55rem .7rem; }
   .nav-cta { padding-inline: 1rem !important; border-radius: 999px !important; }
   .project-grid, .method-grid { grid-template-columns: repeat(2, 1fr); }
-  .analytics-board { grid-template-columns: 1.2fr .8fr; }
-  .viz-map { grid-row: span 2; min-height: 340px; }
 }
 @media (min-width: 901px) {
   .hero-grid, .split-section { grid-template-columns: minmax(0, 1.25fr) minmax(340px, .75fr); align-items: center; }
