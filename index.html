@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="workspace.css">
+  <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -150,7 +151,13 @@
               <p class="timeline-tag">Primeiros passos · Excel</p>
               <h3>Organizar o dado bruto</h3>
               <p>Tabela dinâmica cruzando cidade, gênero e contrato terceirizado — com gráficos de barra comparativos para leitura rápida por região.</p>
-              <img src="analytics-excel.png" alt="Tabela dinâmica no Excel comparando dados por cidade e gênero, com gráficos de barra ao lado" loading="lazy">
+              <button type="button" class="timeline-thumb" data-gallery-trigger aria-label="Ampliar imagem: Tabela dinâmica no Excel comparando dados por cidade e gênero, com gráficos de barra ao lado">
+                <img src="analytics-excel.png" alt="Tabela dinâmica no Excel comparando dados por cidade e gênero, com gráficos de barra ao lado" loading="lazy">
+                <span class="thumb-expand" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Ampliar
+                </span>
+              </button>
             </div>
           </li>
           <li class="timeline-step">
@@ -159,7 +166,13 @@
               <p class="timeline-tag">Primeiros testes · Tableau</p>
               <h3>Sair da planilha, entrar na visualização</h3>
               <p>Primeira exploração fora do Excel: contagem de títulos por país em um gráfico de barras simples, antes de evoluir para uma leitura geográfica.</p>
-              <img src="analytics-tableau-barras.png" alt="Gráfico de barras horizontal no Tableau com contagem de títulos por país" loading="lazy">
+              <button type="button" class="timeline-thumb" data-gallery-trigger aria-label="Ampliar imagem: Gráfico de barras horizontal no Tableau com contagem de títulos por país">
+                <img src="analytics-tableau-barras.png" alt="Gráfico de barras horizontal no Tableau com contagem de títulos por país" loading="lazy">
+                <span class="thumb-expand" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Ampliar
+                </span>
+              </button>
             </div>
           </li>
           <li class="timeline-step">
@@ -168,7 +181,13 @@
               <p class="timeline-tag">Ganhando profundidade · Tableau</p>
               <h3>Dar lugar geográfico ao dado</h3>
               <p>O mesmo dado do passo anterior, agora como mapa: campos calculados de latitude/longitude para mapear volume de títulos por região.</p>
-              <img src="analytics-tableau-mapa.png" alt="Mapa mundial no Tableau mostrando contagem de títulos por país" loading="lazy">
+              <button type="button" class="timeline-thumb" data-gallery-trigger aria-label="Ampliar imagem: Mapa mundial no Tableau mostrando contagem de títulos por país">
+                <img src="analytics-tableau-mapa.png" alt="Mapa mundial no Tableau mostrando contagem de títulos por país" loading="lazy">
+                <span class="thumb-expand" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Ampliar
+                </span>
+              </button>
             </div>
           </li>
           <li class="timeline-step">
@@ -177,7 +196,13 @@
               <p class="timeline-tag">Leitura temporal · Tableau</p>
               <h3>Contar uma história com o dado</h3>
               <p>Análise temporal comparativa (% do total por mês e tipo de conteúdo), com tooltips interativos pensados para leitura executiva, não só para o analista.</p>
-              <img src="analytics-tableau-temporal.png" alt="Gráfico de área no Tableau mostrando evolução percentual de filmes e séries ao longo do tempo" loading="lazy">
+              <button type="button" class="timeline-thumb" data-gallery-trigger aria-label="Ampliar imagem: Gráfico de área no Tableau mostrando evolução percentual de filmes e séries ao longo do tempo">
+                <img src="analytics-tableau-temporal.png" alt="Gráfico de área no Tableau mostrando evolução percentual de filmes e séries ao longo do tempo" loading="lazy">
+                <span class="thumb-expand" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Ampliar
+                </span>
+              </button>
             </div>
           </li>
           <li class="timeline-step">
@@ -186,7 +211,13 @@
               <p class="timeline-tag">Dashboards completos · Tableau</p>
               <h3>Reunir várias leituras em um só painel</h3>
               <p>Painel único combinando pizza, mapa, tabela, ranking por ano e séries dinâmicas por gênero — a mesma base de dados lida sob vários ângulos ao mesmo tempo.</p>
-              <img src="analytics-tableau-dashboard-completo.png" alt="Dashboard completo no Tableau com gráfico de pizza, mapa, tabela de duração e séries temporais por gênero" loading="lazy">
+              <button type="button" class="timeline-thumb" data-gallery-trigger aria-label="Ampliar imagem: Dashboard completo no Tableau com gráfico de pizza, mapa, tabela de duração e séries temporais por gênero">
+                <img src="analytics-tableau-dashboard-completo.png" alt="Dashboard completo no Tableau com gráfico de pizza, mapa, tabela de duração e séries temporais por gênero" loading="lazy">
+                <span class="thumb-expand" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Ampliar
+                </span>
+              </button>
             </div>
           </li>
           <li class="timeline-step">
@@ -195,7 +226,13 @@
               <p class="timeline-tag">Aplicando ao negócio · Excel</p>
               <h3>Transformar dado em decisão</h3>
               <p>Dashboard estratégico por CNAE: concentração de empresas por estado, atividades mais frequentes e um índice de confiança por tempo de mercado — a mesma lógica analítica usada para qualificar leads no case Traduzzo.</p>
-              <img src="analytics-excel-estrategico.png" alt="Dashboard estratégico no Excel com top 5 estados, top 5 atividades por CNAE e índice de confiança por tempo de mercado" loading="lazy">
+              <button type="button" class="timeline-thumb" data-gallery-trigger aria-label="Ampliar imagem: Dashboard estratégico no Excel com top 5 estados, top 5 atividades por CNAE e índice de confiança por tempo de mercado">
+                <img src="analytics-excel-estrategico.png" alt="Dashboard estratégico no Excel com top 5 estados, top 5 atividades por CNAE e índice de confiança por tempo de mercado" loading="lazy">
+                <span class="thumb-expand" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M9 3H3v6M15 3h6v6M9 21H3v-6M15 21h6v-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  Ampliar
+                </span>
+              </button>
             </div>
           </li>
         </ol>
@@ -305,7 +342,31 @@
     <div class="tw-taskbar" id="twTaskbar"></div>
   </div>
 
+  <!-- ============================================================
+       GALERIA — pop-up estilo carrossel para as imagens da timeline
+       ============================================================ -->
+  <div class="gal-overlay" id="galOverlay" role="dialog" aria-modal="true" aria-label="Galeria de imagens" hidden>
+    <button type="button" class="gal-close" id="galClose" aria-label="Fechar galeria">
+      <svg viewBox="0 0 16 16" fill="none" width="15" height="15"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+    <button type="button" class="gal-nav gal-prev" id="galPrev" aria-label="Imagem anterior">
+      <svg viewBox="0 0 16 16" fill="none" width="18" height="18"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="gal-stage">
+      <img class="gal-image" id="galImage" src="" alt="">
+      <div class="gal-caption">
+        <p class="gal-tag" id="galTag"></p>
+        <h3 id="galTitle"></h3>
+      </div>
+      <div class="gal-counter"><span id="galCounter">1 / 6</span></div>
+    </div>
+    <button type="button" class="gal-nav gal-next" id="galNext" aria-label="Próxima imagem">
+      <svg viewBox="0 0 16 16" fill="none" width="18" height="18"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+
   <script src="script.js"></script>
   <script src="workspace.js"></script>
+  <script src="gallery.js"></script>
 </body>
 </html>
