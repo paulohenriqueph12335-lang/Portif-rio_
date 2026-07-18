@@ -219,4 +219,16 @@
   }
   .tw-taskbar{display:none;}
   .tw-win-header{cursor:default;}
+  .tw-title{max-width:44vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+}
+
+@media (max-width:480px){
+  .tw-topbar{padding:0 12px;}
+  #twOpenCount{display:none;}
+  .tw-title{max-width:38vw;}
+  .tw-win-body{padding:16px;}
+  .tw-kpi-grid{grid-template-columns:1fr;}
+  .tw-chart-box, .tw-diagram-box{padding:12px;}
+  .tw-close span{display:none;}
+  .tw-close{padding:8px 10px;}
 }
