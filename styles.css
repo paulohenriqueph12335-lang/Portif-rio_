@@ -130,30 +130,6 @@ dd { margin: 0; color: var(--signal); font: 600 clamp(1.6rem, 6vw, 3rem)/1 var(-
 .project-card a { margin-top: auto; color: var(--signal); font-weight: 700; }
 
 .analytics-section { padding-top: 1rem; }
-.timeline { list-style: none; display: grid; gap: 1.5rem; counter-reset: tl; }
-.timeline-step { display: grid; gap: 1rem; grid-template-columns: 44px 1fr; }
-.timeline-marker { display: flex; flex-direction: column; align-items: center; }
-.timeline-marker span {
-  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%;
-  background: var(--ink); color: #fff; font-family: var(--font-mono); font-size: .82rem; font-weight: 700; flex: 0 0 auto;
-}
-.timeline-step:not(:last-child) .timeline-marker::after {
-  content: ""; flex: 1 1 auto; width: 2px; background: var(--line-strong); margin-top: .5rem; min-height: 2rem;
-}
-.timeline-card {
-  background: var(--paper-2); border: 1px solid var(--line); border-radius: 18px; padding: 1.35rem;
-  display: grid; gap: .6rem;
-}
-.timeline-tag { font-family: var(--font-mono); font-size: .76rem; color: var(--teal); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; margin: 0; }
-.timeline-card h3 { font-size: 1.3rem; }
-.timeline-card p:not(.timeline-tag) { color: var(--ink-soft); margin: 0; }
-.timeline-card img { width: 100%; border-radius: 12px; border: 1px solid var(--line); margin-top: .4rem; }
-
-@media (min-width: 721px) {
-  .timeline-step { grid-template-columns: 56px 1fr; }
-  .timeline-marker span { width: 48px; height: 48px; font-size: .9rem; }
-}
-
 
 .method-grid { counter-reset: step; list-style: none; }
 .method-item { padding: 1.3rem; list-style: none; }
