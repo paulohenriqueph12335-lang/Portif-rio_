@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="deck.css">
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -75,35 +76,75 @@
           <figcaption>Paulo Henrique — em pleno modo estratégico.</figcaption>
         </figure>
         <div class="quem-portrait-note">
-          <p class="eyebrow">Prazer, essa sou eu</p>
+          <p class="eyebrow">Prazer, esse sou eu</p>
           <p>Sim, esse mapa-múndi atrás de mim é decoração de verdade — mas também é uma boa metáfora: gosto de olhar pra um problema grande e achar por onde começar.</p>
         </div>
       </div>
 
-      <div class="container">
-        <div class="quem-cards">
-          <article class="quem-card reveal">
-            <span class="quem-card-icon" aria-hidden="true">🧠</span>
-            <h3>O que mais gosto</h3>
-            <p>Resolver problemas. Se existe um problema, ele tem que ter solução — ainda bem que não sou físico, não é mesmo?</p>
-          </article>
-          <article class="quem-card reveal">
-            <span class="quem-card-icon" aria-hidden="true">⚡</span>
-            <h3>Combustível oficial</h3>
-            <p>Energético e relatório. Ele promete asas — eu só peço que aguentem até o fim do dashboard.</p>
-          </article>
-          <article class="quem-card reveal">
-            <span class="quem-card-icon" aria-hidden="true">📊</span>
-            <h3>Modo favorito</h3>
-            <p>Organizar dados. Criar processos. Automatizar tarefas.</p>
-          </article>
-          <article class="quem-card reveal">
-            <span class="quem-card-icon" aria-hidden="true">🎯</span>
-            <h3>Objetivo</h3>
-            <p>Construir soluções que economizam tempo das pessoas — trazer um pouco de paz, do jeito que eu sei fazer.</p>
-          </article>
+      <section class="deck-section" id="deckSection" aria-label="Descubra um pouco mais sobre mim">
+        <div class="container deck-intro">
+          <h2 class="reveal">Descubra um pouco mais sobre mim.</h2>
         </div>
-      </div>
+
+        <div class="deck-stage">
+          <canvas class="deck-bg" id="deckBg" aria-hidden="true"></canvas>
+
+          <div class="deck" id="deck" role="group" aria-roledescription="cartões" aria-label="Cartões sobre minha personalidade">
+            <article class="deck-card" data-accent="#3a5a8c" tabindex="0" aria-label="Cartão 1 de 4 — Resolver problemas">
+              <span class="deck-card-num" aria-hidden="true">01</span>
+              <span class="deck-card-icon" aria-hidden="true">🧠</span>
+              <h3>Resolver problemas</h3>
+              <p class="deck-card-line">Existe um problema? Provavelmente já estou imaginando três formas diferentes de resolver.</p>
+              <div class="deck-card-fact">
+                <span class="deck-card-fact-label">Curiosidade</span>
+                <p>Costumo gastar mais tempo entendendo o problema do que implementando a solução.</p>
+              </div>
+            </article>
+            <article class="deck-card" data-accent="#1b5e4f" tabindex="0" aria-label="Cartão 2 de 4 — Combustível">
+              <span class="deck-card-num" aria-hidden="true">02</span>
+              <span class="deck-card-icon" aria-hidden="true">⚡</span>
+              <h3>Combustível</h3>
+              <p class="deck-card-line">Café quando dá. Energético quando o prazo resolve aparecer antes de mim.</p>
+              <div class="deck-card-fact">
+                <span class="deck-card-fact-label">Curiosidade</span>
+                <p>A documentação salva mais projetos do que muito código bonito.</p>
+              </div>
+            </article>
+            <article class="deck-card" data-accent="#e2a63c" tabindex="0" aria-label="Cartão 3 de 4 — Modo favorito">
+              <span class="deck-card-num" aria-hidden="true">03</span>
+              <span class="deck-card-icon" aria-hidden="true">📊</span>
+              <h3>Modo favorito</h3>
+              <p class="deck-card-line">Organizar. Automatizar. Melhorar.</p>
+              <div class="deck-card-fact">
+                <span class="deck-card-fact-label">Curiosidade</span>
+                <p>Se um processo precisa ser repetido cinco vezes, minha cabeça já pensa em automatizar.</p>
+              </div>
+            </article>
+            <article class="deck-card" data-accent="#ff5a36" tabindex="0" aria-label="Cartão 4 de 4 — Objetivo">
+              <span class="deck-card-num" aria-hidden="true">04</span>
+              <span class="deck-card-icon" aria-hidden="true">🎯</span>
+              <h3>Objetivo</h3>
+              <p class="deck-card-line">Criar soluções. Economizar tempo. Facilitar a vida das pessoas.</p>
+              <div class="deck-card-fact">
+                <span class="deck-card-fact-label">Curiosidade</span>
+                <p>Nada é mais satisfatório do que ouvir: "Agora isso ficou muito mais fácil."</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="deck-controls">
+            <button type="button" class="deck-btn deck-btn-prev" id="deckPrev" aria-label="Cartão anterior">
+              <svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="deck-progress" id="deckProgress" role="status" aria-live="polite"></div>
+            <button type="button" class="deck-btn deck-btn-next" id="deckNext" aria-label="Próximo cartão">
+              <svg viewBox="0 0 16 16" fill="none" width="16" height="16"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+
+          <p class="deck-hint">Arraste, clique ou use as setas do teclado.</p>
+        </div>
+      </section>
 
       <div class="container quem-curiosidades">
         <p class="eyebrow reveal">Conhecendo um pouco mais</p>
@@ -173,5 +214,6 @@
 
   <script src="script.js"></script>
   <script src="about.js"></script>
+  <script src="deck.js"></script>
 </body>
 </html>

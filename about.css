@@ -72,21 +72,7 @@
   .quem-photo img { transition: none; }
 }
 
-/* Cartões */
-.quem-cards { display: grid; grid-template-columns: 1fr; gap: 1.1rem; margin-bottom: 4rem; }
-.quem-card {
-  background: var(--paper-2); border: 1px solid var(--line); border-radius: 18px; padding: 1.5rem;
-  display: flex; flex-direction: column; gap: .6rem;
-  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-.quem-card:hover { transform: translateY(-4px); border-color: var(--line-strong); box-shadow: var(--shadow); }
-.quem-card-icon { font-size: 1.8rem; display: inline-block; transition: transform .3s ease; }
-.quem-card:hover .quem-card-icon { transform: scale(1.15) rotate(-6deg); }
-.quem-card h3 { font-size: 1.05rem; margin: 0; }
-.quem-card p { color: var(--ink-soft); margin: 0; font-size: .95rem; }
-
-@media (min-width: 640px) { .quem-cards { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1000px) { .quem-cards { grid-template-columns: repeat(4, 1fr); } }
+/* Cartões substituídos pelo deck interativo — ver deck.css */
 
 /* Curiosidades — acordeão */
 .quem-curiosidades { max-width: 720px; margin: 0 auto 4rem; }
@@ -136,5 +122,5 @@
 @media (prefers-reduced-motion: reduce) {
   .quem-caret { animation: none; opacity: 1; }
   .quem-glow.is-visible .glow-phrase { animation: none; }
-  .quem-card, .quem-card-icon, .quem-tl-dot, .quem-final-btn { transition: none; }
+  .quem-tl-dot, .quem-final-btn { transition: none; }
 }
