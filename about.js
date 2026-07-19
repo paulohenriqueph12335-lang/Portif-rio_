@@ -103,8 +103,13 @@ if (finalBlock && finalBtn && 'IntersectionObserver' in window) {
 
 if (finalBtn) {
   finalBtn.addEventListener('click', () => {
-    const target = document.querySelector(finalBtn.dataset.scrollTarget);
-    if (target) target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    const targetValue = finalBtn.dataset.scrollTarget || '';
+    if (targetValue.startsWith('#')) {
+      const target = document.querySelector(targetValue);
+      if (target) target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    } else if (targetValue) {
+      window.location.href = targetValue;
+    }
   });
 }
 
