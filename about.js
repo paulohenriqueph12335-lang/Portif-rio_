@@ -9,7 +9,11 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
    ============================================================ */
 const introEl = document.querySelector('.quem-intro');
 const typedEl = document.getElementById('quemTypedText');
-const TYPED_TEXT = 'Talvez a melhor forma seja deixar eu me apresentar.';
+let typingDone = false;
+
+function getTypedText(){
+  return (window.PH_I18N && window.PH_I18N.t('about.intro.typed')) || 'Talvez a melhor forma seja deixar eu me apresentar.';
+}
 
 function typeWriter(el, text, speed){
   return new Promise(resolve => {
@@ -30,15 +34,22 @@ if (introEl && typedEl && 'IntersectionObserver' in window) {
     entries.forEach(entry => {
       if (entry.isIntersecting && !started) {
         started = true;
-        setTimeout(() => typeWriter(typedEl, TYPED_TEXT, 26), reduceMotion ? 0 : 900);
+        setTimeout(() => typeWriter(typedEl, getTypedText(), 26).then(() => { typingDone = true; }), reduceMotion ? 0 : 900);
         introObserver.unobserve(entry.target);
       }
     });
   }, { threshold: 0.4 });
   introObserver.observe(introEl);
 } else if (typedEl) {
-  typedEl.textContent = TYPED_TEXT;
+  typedEl.textContent = getTypedText();
+  typingDone = true;
 }
+
+/* Troca de idioma não deve reiniciar a animação de digitação —
+   se já terminou (ou nunca chegou a rodar), só troca o texto na hora. */
+window.addEventListener('languagechange', () => {
+  if (typedEl && typingDone) typedEl.textContent = getTypedText();
+});
 
 /* ============================================================
    Acordeão "Conhecendo um pouco mais" — acessível e animado

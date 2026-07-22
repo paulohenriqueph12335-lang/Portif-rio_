@@ -99,7 +99,8 @@ function updateProgress(){
   Array.from(progressWrap.children).forEach((dot, i) => {
     dot.classList.toggle('is-active', i === activeOriginalIndex);
   });
-  progressWrap.setAttribute('aria-label', `Cartão ${activeOriginalIndex + 1} de ${total}`);
+  const template = (window.PH_I18N && window.PH_I18N.t('about.deck.progressLabel')) || 'Cartão {n} de {total}';
+  progressWrap.setAttribute('aria-label', template.replace('{n}', activeOriginalIndex + 1).replace('{total}', total));
   prevBtn.disabled = historyStack.length === 0;
 }
 
@@ -244,5 +245,7 @@ prevBtn.addEventListener('click', goBack);
 
 buildProgress();
 layout();
+
+window.addEventListener('languagechange', updateProgress);
 
 })();
