@@ -18,7 +18,7 @@ window.I18N_PT = {
     closeMenu: "Fechar menu"
   },
   hero: {
-    eyebrow: "Customer Success · CX · Business Analysis · Process Improvement",
+    eyebrow: "Consultor de Projetos · Customer Success · CX · Business Analysis",
     titleHtml: "Transformo relacionamento com o cliente em <em>receita previsível</em>.",
     text: "Estruturo processos de prospecção, onboarding e retenção — combinando CRM, automação e IA — para reduzir custo operacional e aumentar conversão sem perder a experiência do cliente.",
     ctaPrimary: "Ver cases",
@@ -106,7 +106,7 @@ window.I18N_PT = {
   },
   contact: {
     eyebrow: "Vamos conversar?",
-    title: "Aberto a novas oportunidades em CS, CX e Business Analysis.",
+    title: "Aberto a vagas de Consultor de Projetos ou Analista de Projetos — em CS, CX e Business Analysis.",
     text: "Diadema – SP · atendimento remoto ou presencial na Grande São Paulo.",
     btnEmail: "Enviar e-mail",
     btnLinkedIn: "LinkedIn",
